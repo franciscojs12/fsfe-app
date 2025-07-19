@@ -1,10 +1,13 @@
-const http = require("http");
+// BASIC HTTP SERVER
+const http = require('http');
 
 const PORT = 3000;
 
-http.createServer(function (req, res) {
-  res.write("On the way to being a full stack engineer (!!)");
-  res.end();
-}).listen(PORT);
+http
+  .createServer(function (req, res) {
+    res.write('HTTP response from the server');
+    res.end();
+  })
+  .listen(PORT);
 
 console.log(`Server started on port ${PORT} `);
